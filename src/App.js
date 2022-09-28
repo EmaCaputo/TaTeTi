@@ -93,9 +93,7 @@ function App() {
       <div className='game-info status'>
           <Ganador chequeo={chequeo} />
         </div>
-        <div className='game-info status'>
-          <Turno turno={turn} />
-        </div>
+        
         <div className='board-row'>
           <ol>
             <ul className='square' onClick={() => setBoxValue(0, 0)}>{matrix[0][0]}</ul>
@@ -112,6 +110,10 @@ function App() {
             <ul className='square' onClick={() => setBoxValue(2, 1)}>{matrix[2][1]}</ul>
             <ul className='square' onClick={() => setBoxValue(2, 2)}>{matrix[2][2]}</ul>
           </ol>
+        </div>
+        <br></br>
+        <div className='game-info status'>
+          <Turno turno={turn} />
         </div>
         <br></br>
         <button title='Press me' onClick={() => ResetMatrix()}>
